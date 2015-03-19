@@ -1,4 +1,4 @@
-package mylog
+package GoMylog
 
 import (
 	"fmt"
