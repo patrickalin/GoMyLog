@@ -1,7 +1,6 @@
 package GoMylog
 
 import (
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -42,19 +41,19 @@ func Init(logLevel Level) {
 		warningHandle = os.Stdout
 		infoHandle = ioutil.Discard
 		traceHandle = ioutil.Discard
-		fmt.Println("\n Log Level Warning\n\n")
+		log.Println("Log Level Warning")
 	case INFO:
 		errorHandle = os.Stdout
 		warningHandle = os.Stdout
 		infoHandle = os.Stdout
 		traceHandle = ioutil.Discard
-		fmt.Println("\n Log Level Info\n\n")
+		log.Println("Log Level Info")
 	case TRACE:
 		errorHandle = os.Stdout
 		warningHandle = os.Stdout
 		infoHandle = os.Stdout
 		traceHandle = os.Stdout
-		fmt.Println("\n Log Level Trace\n\n")
+		log.Println("Log Level Trace")
 	default:
 		log.Fatal("Error in Log Level")
 	}
